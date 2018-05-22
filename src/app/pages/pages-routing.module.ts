@@ -1,20 +1,25 @@
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
 
-import { PagesComponent } from './pages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {PagesComponent} from './pages.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {CatalogoNormasComponent} from './catalogo-normas/catalogo-normas.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
     {
-      path: 'dashboard',
+      path: 'inicio',
       component: DashboardComponent,
     },
     {
+      path: 'catalogo-normas',
+      component: CatalogoNormasComponent,
+    },
+    {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'inicio',
       pathMatch: 'full',
     },
   ],

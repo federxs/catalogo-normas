@@ -1,36 +1,47 @@
-import { NbMenuItem } from '@nebular/theme';
+import {NbMenuItem} from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Inicio',
     icon: 'nb-home',
-    link: '/pages/dashboard',
+    link: '/pages/inicio',
     home: true,
   },
   {
-    title: 'FEATURES',
+    title: 'Índice',
     group: true,
   },
   {
-    title: 'Auth',
+    title: 'Catálogo de Normas',
+    icon: 'nb-lightbulb',
+    link: '/pages/catalogo-normas',
+  },
+  {
+    title: 'Instituciones',
     icon: 'nb-locked',
     children: [
       {
-        title: 'Login',
-        link: '/auth/login',
+        title: 'ISO',
+        link: '/pages/instituciones/iso',
       },
       {
-        title: 'Register',
-        link: '/auth/register',
+        title: 'IEEE',
+        link: '/pages/instituciones/ieee',
       },
       {
-        title: 'Request Password',
-        link: '/auth/request-password',
+        title: 'NIST',
+        link: '/pages/instituciones/nist',
       },
       {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
+        title: 'IRAM',
+        link: '/pages/instituciones/iram',
       },
     ],
   },
+  {
+    title: 'Quiénes somos',
+    icon: 'nb-user',
+    link: '/pages/quienes-somos',
+  },
+
 ];
